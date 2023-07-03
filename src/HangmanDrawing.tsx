@@ -23,11 +23,67 @@ const Body = (
   }}/>
 )
 
+const RIGHT_ARM = (
+  <div style={{
+    width: "100px",
+    height: "10px",
+    background: "black",
+    position: "absolute",
+    top: "250px",
+    right: "-100px",
+    rotate: "-30deg",
+    transformOrigin: "left bottom",
+  }}/>
+)
+
+const LEFT_ARM = (
+  <div style={{
+    width: "100px",
+    height: "10px",
+    background: "black",
+    position: "absolute",
+    top: "250px",
+    right: "10px",
+    rotate: "30deg",
+    transformOrigin: "right bottom",
+  }}/>
+)
+
+const RIGHT_LEG = (
+  <div style={{
+    width: "100px",
+    height: "10px",
+    background: "black",
+    position: "absolute",
+    bottom: "110px",
+    right: "-90px",
+    rotate: "60deg",
+    transformOrigin: "left bottom",
+  }}/>
+)
+
+const LEFT_LEG = (
+  <div style={{
+    width: "140px",
+    height: "10px",
+    background: "black",
+    position: "absolute",
+    bottom: "110px",
+    right: "0px",
+    rotate: "-50deg",
+    transformOrigin: "right bottom",
+  }}/>
+)
+
 export function HangmanDrawing() {
   return (
     <div style={{ position: "relative" }}>
       {Head}
       {Body}
+      {RIGHT_ARM}
+      {LEFT_ARM}
+      {RIGHT_LEG}
+      {LEFT_LEG}
       <div //This div is the rope. Place relative to parent div.
         style={{
           height: "50px",
