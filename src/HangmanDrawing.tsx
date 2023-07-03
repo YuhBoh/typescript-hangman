@@ -75,15 +75,17 @@ const LEFT_LEG = (
   }}/>
 )
 
-export function HangmanDrawing() {
+type HangmanDrawingProps = {
+  numberOfGuesses: number
+}
+
+const BODY_PARTS = [Head, Body, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+
+export function HangmanDrawing({ numberOfGuesses }: 
+HangmanDrawingProps) {
   return (
     <div style={{ position: "relative" }}>
-      {Head}
-      {Body}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       <div //This div is the rope. Place relative to parent div.
         style={{
           height: "50px",
